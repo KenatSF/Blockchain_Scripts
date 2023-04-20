@@ -1,6 +1,6 @@
 
 
-class focos:
+class status_focos:
     def __init__(self, on, off):
         self.on = on
         self.off = off
@@ -27,20 +27,20 @@ class focos:
 
 def main():
 
-    foco = focos("encender", "apagar")
+    focos = status_focos("encendido", "apagado")
 
     for i in range(1, 101):
         for j in range(1, 101):
             if j%i == 0:
-                foco.changeStaus(j)
+                focos.changeStaus(j)
 
 
 
-    focos_encendidos = [key for key, value in foco.getDiccionario().items() if value == "encender"]
+    focos_encendidos = [key for key, value in focos.getDiccionario().items() if value == "encendido"]
     print("Focos encendidos")
     print(focos_encendidos)
 
-    focos_apagados = [key for key, value in foco.getDiccionario().items() if value == "apagar"]
+    focos_apagados = [key for key, value in focos.getDiccionario().items() if value == "apagado"]
     print("Focos apagados:")
     print(focos_apagados)
 
