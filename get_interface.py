@@ -239,10 +239,8 @@ def read_sol_file(file_path):
 
 
 def main(file_name) -> None:
-    #file_path = "/sol_files/"
     file_path = file_name + ".sol"
     read_sol_file(file_path)
-    #print(file_path)
 
 if __name__ == '__main__':
     main("Contract_To_Interface")
